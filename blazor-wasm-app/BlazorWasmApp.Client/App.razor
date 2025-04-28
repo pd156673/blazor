@@ -1,0 +1,19 @@
+@page "/"
+
+<h1>Willkommen bei Blazor WebAssembly!</h1>
+
+<p>Dies ist eine Beispielanwendung, die mit Blazor WebAssembly erstellt wurde.</p>
+
+<Router>
+    <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+</Router>
+
+@code {
+    private RouteData routeData;
+
+    protected override void OnInitialized()
+    {
+        routeData = new RouteData(typeof(Index));
+    }
+}

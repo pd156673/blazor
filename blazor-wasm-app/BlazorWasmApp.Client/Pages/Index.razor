@@ -1,0 +1,23 @@
+@page "/"
+
+<h1>Willkommen bei Blazor WebAssembly!</h1>
+
+<p>Dies ist die Startseite der Anwendung.</p>
+
+<p>Hier kannst du mit Blazor WebAssembly interaktive Webanwendungen erstellen, die in C# geschrieben sind.</p>
+
+<button @onclick="ShowMessage">Klicke hier für eine Nachricht</button>
+
+@if (showMessage)
+{
+    <p>Hallo! Dies ist eine Beispielnachricht.</p>
+}
+
+@code {
+    private bool showMessage = false;
+
+    private void ShowMessage()
+    {
+        showMessage = true;
+    }
+}
